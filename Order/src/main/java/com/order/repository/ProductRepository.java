@@ -22,13 +22,13 @@ public class ProductRepository {
 
     // 상품 재고 차감 메소드
     public void reduceStock(int productId, int quantity) {
-        String sql = "UPDATE products SET stock = stock - ? WHERE id = ?";
+        String sql = "UPDATE PRODUCT SET stock = stock - ? WHERE id = ?";
         jdbcTemplate.update(sql, quantity, productId);
     }
 
     // 상품 정보 조회 메소드
     public ProductDTO findById(int productId) {
-        String sql = "SELECT * FROM products WHERE id = ?";
+        String sql = "SELECT * FROM PRODUCT WHERE id = ?";
         return jdbcTemplate.queryForObject(sql, new Object[]{productId}, (rs, rowNum) -> {
             ProductDTO product = new ProductDTO();
             product.setId(rs.getInt("id"));
