@@ -1,11 +1,14 @@
 package com.order.dto;
 
+import lombok.Builder;
 import lombok.Data;
 
 @Data
 public class ProductDTO {
-    private int id;
+    private Integer id; // null 가능
     private String name;
-    private int price;
-    private int stock; // 재고 수량
+    private Integer price; // null 가능
+    private Integer stock; // null 가능
+
+    public ProductDTO() {}
 }

@@ -21,7 +21,7 @@ public class ProductRepository {
     }
 
     // 상품 재고 차감 메소드
-    public void reduceStock(int productId, int quantity) {
+    public void reduceStock(Integer productId, int quantity) {
         String sql = "UPDATE PRODUCT SET stock = stock - ? WHERE id = ?";
         jdbcTemplate.update(sql, quantity, productId);
     }

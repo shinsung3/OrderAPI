@@ -28,8 +28,7 @@ public class ProductServiceImpl implements ProductService{
         return productRepository.selectAll();
     }
 
-    @Autowired
-    public void deductStock(int productId, int quantity) {
+    public void deductStock(Integer productId, int quantity) {
         ProductDTO product = productRepository.findById(productId);
         if (product.getStock() < quantity) {
             throw new IllegalArgumentException("재고가 부족합니다.");
