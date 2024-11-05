@@ -23,8 +23,8 @@ public class MainController {
 
     // 상품 재고 차감 API
     @PostMapping("/{id}/stock/reduce")
-    public ResponseEntity<String> reduceStock(@PathVariable Integer id, @RequestParam int quantity) {
-        productService.deductStock(id, quantity);
-        return ResponseEntity.ok("재고가 차감되었습니다.");
+    public ProductDTO reduceStock(@PathVariable int id, @RequestParam int quantity) {
+        return productService.deductStock(id, quantity);
+//        return ResponseEntity.ok(quantity+" product reduce");
     }
 }

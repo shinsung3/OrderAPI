@@ -5,10 +5,8 @@ import lombok.Data;
 
 @Data
 public class ProductDTO {
-    private Integer id; // null 가능
+    private int id; // null 가능
     private String name;
-    private Integer price; // null 가능
-    private Integer stock; // null 가능
-
-    public ProductDTO() {}
+    private int price; // null 가능
+    private int stock; // null 가능
 }

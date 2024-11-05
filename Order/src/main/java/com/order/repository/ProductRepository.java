@@ -21,9 +21,10 @@ public class ProductRepository {
     }
 
     // 상품 재고 차감 메소드
-    public void reduceStock(Integer productId, int quantity) {
+    public ProductDTO reduceStock(int productId, int quantity) {
         String sql = "UPDATE PRODUCT SET stock = stock - ? WHERE id = ?";
         jdbcTemplate.update(sql, quantity, productId);
+        return findById(productId);
     }
 
     // 상품 정보 조회 메소드
