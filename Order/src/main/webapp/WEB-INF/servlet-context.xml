@@ -14,7 +14,7 @@
 
     <beans:bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <beans:property name="driverClassName" value="org.sqlite.JDBC" />
-        <beans:property name="url" value="jdbc:sqlite:identifier.sqlite.products" /> <!-- 데이터베이스 경로 -->
+        <beans:property name="url" value="jdbc:sqlite:C:\Users\tlstj\eclipse-workspace\OrderAPI\Order\src\main\resources\data\identifier.sqlite" /> <!-- 데이터베이스 경로 -->
         <beans:property name="username" value="" /> <!-- SQLite는 사용자 이름 필요 없음 -->
         <beans:property name="password" value="" /> <!-- SQLite는 비밀번호 필요 없음 -->
     </beans:bean>
