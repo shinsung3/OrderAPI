@@ -6,7 +6,7 @@
     <!-- 데이터 소스 정의 -->
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="org.sqlite.JDBC"/>
-        <property name="url" value="jdbc:sqlite:src/main/resources/data/identifier.sqlite"/>
+        <property name="url" value="jdbc:sqlite:identifier.sqlite"/>
     </bean>
 
     <!-- JdbcTemplate 정의 -->
