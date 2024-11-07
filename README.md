@@ -10,5 +10,5 @@ GET http://localhost:8080/api/products/list
 상품 재고 차감 api
 POST http://localhost:8080/api/products/1/stock/reduce?quantity=2
 <div>
-  <img width="509" alt="화면 캡처 2024-11-06 003829" src="https://github.com/user-attachments/assets/73226716-ea1e-4e06-be70-3aace27baec7">
+  <img width="509" alt="화면 캡처 2024-11-06 003829" src="https://github.com/user-attachments/assets/e2ef799e-a28a-4b96-a3d0-3b37ca003044">
 </div>
